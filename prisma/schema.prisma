@@ -1,0 +1,31 @@
+// Building Entry/Exit Logging System - Prisma Schema
+// Database: SQLite for rapid local deployment
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Person {
+  id         String     @id @default(uuid())
+  fullName   String
+  role       String     // 'Resident', 'Staff', 'Guest'
+  identifier String?    // Apartment Number, ID Badge, etc.
+  createdAt  DateTime   @default(now())
+  logs       LogEntry[]
+}
+
+model LogEntry {
+  id        String   @id @default(uuid())
+  personId         String?
+  unregisteredName String?
+  unregisteredRole String? // 'Visitor', 'Courier', 'Contractor', etc.
+  type             String   // 'ENTRY' or 'EXIT'
+  timestamp        DateTime @default(now())
+  notes            String?
+  person           Person?  @relation(fields: [personId], references: [id], onDelete: Cascade)
+}
