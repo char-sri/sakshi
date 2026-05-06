@@ -34,13 +34,13 @@ export function Sidebar() {
           >
             <Building2 size={24} color="white" strokeWidth={2.5} />
           </div>
-          <div>
-            <h1
-              className="text-lg font-bold tracking-tight"
+          <div className="flex flex-col">
+            <span
+              className="text-[17px] font-bold"
               style={{ color: "#18181b", letterSpacing: "-0.02em" }}
             >
-              BuildingLog
-            </h1>
+              Sakshi
+            </span>
             <p
               className="text-sm"
               style={{ color: "#a1a1aa", marginTop: "2px" }}

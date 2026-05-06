@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BuildingLog — Entry & Exit Management",
+  title: "Sakshi — Entry & Exit Management",
   description:
-    "A modern building entry and exit logging system for managing resident, staff, and guest access with real-time tracking.",
+    "A modern entry and exit logging system for managing resident, staff, and guest access with real-time tracking.",
 };
 
 export default function RootLayout({

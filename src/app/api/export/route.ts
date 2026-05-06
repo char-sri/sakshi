@@ -46,7 +46,7 @@ export async function GET() {
       status: 200,
       headers: {
         "Content-Type": "text/csv; charset=utf-8",
-        "Content-Disposition": 'attachment; filename="building_logs.csv"',
+        "Content-Disposition": 'attachment; filename="sakshi_logs.csv"',
       },
     });
   } catch (error) {
