@@ -30,8 +30,10 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/uuid": "^10.0.0",
+    "caxa": "^3.0.1",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "fs-extra": "^11.3.6",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
